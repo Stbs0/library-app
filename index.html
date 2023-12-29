@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header"><h1>Library App</h1></header>
+      <main class="main">
+        <div class="table-container">
+          <table>
+            <caption>
+              books
+            </caption>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Number pages</th>
+                <th>Read status</th>
+                <th>Delete</th>
+                <th>Change Read status</th>
+              </tr>
+            </thead>
+            <tbody class="data"></tbody>
+          </table>
+        </div>
+
+        <dialog id="dialog">
+          <form>
+            <h1>Add book's details</h1>
+
+            <label for="title">
+              title of the book<input type="text" value="default" id="title"
+            /></label>
+            <label for="author"
+              >Author of the book<input type="text" value="default" id="author"
+            /></label>
+            <label for="pages"
+              >Number of the pages<input type="number" value="0" id="pages"
+            /></label>
+            <fieldset>
+              <legend>Read status</legend>
+
+              <label for="read"
+                >read
+                <input type="radio" id="read" name="read" value="read" />
+              </label>
+
+              <label for="read"
+                >wishlist
+                <input
+                  type="radio"
+                  id="wishlist"
+                  name="read"
+                  value="wishlist"
+                />
+              </label>
+            </fieldset>
+            <button id="conform">conform</button
+            ><button id="cancel">cancel</button>
+          </form>
+        </dialog>
+
+        <div class="buttons">
+          <button class="add-book">add-book</button>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
