@@ -1,15 +1,16 @@
 const myLibrary = [];
+class Book {
+  constructor(author, title, pages, read) {
+    this.author = author;
+    this.title = title;
+    this.pages = pages;
+    this.read = read;
+  }
 
-function Book(author, title, pages, read) {
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.read = read;
+  toggleReadStatus() {
+    this.read = this.read === "read" ? "wishlist" : "read";
+  }
 }
-// Extend the Book prototype to include a method for toggling read status
-Book.prototype.toggleReadStatus = function () {
-  this.read = this.read === "read" ? "wishlist" : "read";
-};
 
 function addBookToLibrary(book) {
   myLibrary.push(book);
